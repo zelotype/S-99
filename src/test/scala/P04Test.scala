@@ -1,7 +1,16 @@
 import org.scalatest.{FunSuite, Matchers}
 
 class P04Test extends FunSuite with Matchers{
-  test("Return reverse list") {
-    P04.reverseList(List(1,2,3,4,5,6)) shouldEqual List(6,5,4,3,2,1)
+  test("return length of list") {
+    P04.lengthList(List(1,2,3,4,5,6,6,7,8,8)) shouldEqual 10
+  }
+  test("return length of list -- version 2") {
+    P04.lengthListRecursive(List(1,2,3,4,5,6,6,7,8,8)) shouldEqual 10
+  }
+  test("return 0 when input Nil") {
+    P04.lengthList(List())
+  }
+  test("return 0 when input Nil -- version 2") {
+    P04.lengthListRecursive(List())
   }
 }

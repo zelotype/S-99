@@ -17,4 +17,12 @@ class P03Test extends FunSuite with Matchers{
       P03.indexElement(-3, List(2,3,5,6,8,8))
     }
   }
+  test("Return index element from list -- version 2") {
+    P03.indexElement(4, List(7,5,3,5,6,8,8,7)) shouldEqual 6
+  }
+  test("Return NoSuchElementException if no element in list -- version 2") {
+    assertThrows[NoSuchElementException] {
+      P03.indexElement(5, List())
+    }
+  }
 }
